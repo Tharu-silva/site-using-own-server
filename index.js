@@ -1,5 +1,5 @@
 const http = require('http');
-const fs = require('fs/promises')
+const fs = require('fs/promises');
 
 //We just created a server that listens for http requests on a certain port. 
 // Then depending on the url we write a certain file to it
@@ -17,14 +17,14 @@ const server = http.createServer(async (req, res) => {
     res.end();
   } else if (url == '/about') {
 
-    const file = await fs.readFile('./404.html', { encoding: 'utf8' })
+    const file = await fs.readFile('./about.html', { encoding: 'utf8' })
     // The HEAD/meta data of the response
     res.writeHead(200,'Content-type', 'text/html');
     res.write(file);
     res.end();
   } else if (url == '/contact-me') {
     
-    const file = await fs.readFile('./404.html', { encoding: 'utf8' })
+    const file = await fs.readFile('./contact-me.html', { encoding: 'utf8' })
     // The HEAD/meta data of the response
     res.writeHead(200,'Content-type', 'text/html');
     // We write the response as the file 
