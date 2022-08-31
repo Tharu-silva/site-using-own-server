@@ -14,6 +14,7 @@ app.get('/', async function(req,res) {
 
 
 app.get('/contact-me', async function(req,res) {
+    const file = await fs.readFile('./contact-me.html', { encoding: 'utf8' })
     // The HEAD/meta data of the response
     res.writeHead(200,'Content-type', 'text/html');
     // We write the response as the file 

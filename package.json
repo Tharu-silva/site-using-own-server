@@ -16,6 +16,7 @@
     "url": "https://github.com/Tharu-silva/site-using-own-server/issues"
   },
   "homepage": "https://github.com/Tharu-silva/site-using-own-server#readme",
-  "devDependencies": {
+  "dependencies": {
+    "express": "^4.18.1"
   }
 }
